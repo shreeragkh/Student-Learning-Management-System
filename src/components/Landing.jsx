@@ -1,47 +1,45 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { BookOpen,Brain,BarChart3,Users,Sparkles,CheckCircle,GraduationCap,ArrowRight,Zap,Target } from 'lucide-react'
-const Landing = () => {
-  const navigate = useNavigate()
+import { useNavigate } from 'react-router';
+import { BookOpen, Brain, BarChart3, Users, Sparkles, CheckCircle,GraduationCap,ArrowRight,Zap,Target } from 'lucide-react';
+const LandingPage = () => {
+  const navigate = useNavigate();
   const features = [
-      {
-        icon: Brain,
-        title: 'AI-Powered Learning',
-        description: 'Personalized content recommendations based on your performance and learning style',
-        color: 'from-blue-600 to-cyan-600'
-      },
-      {
-        icon: Target,
-        title: 'Smart Quiz Generation',
-        description: 'AI creates custom quizzes tailored to student needs with faculty approval',
-        color: 'from-purple-600 to-pink-600'
-      },
-      {
-        icon: BarChart3,
-        title: 'Performance Analytics',
-        description: 'Detailed insights and progress tracking for students and teachers',
-        color: 'from-green-600 to-emerald-600'
-      },
-      {
-        icon: Zap,
-        title: 'Instant Feedback',
-        description: 'Get immediate results and explanations after completing quizzes',
-        color: 'from-orange-600 to-red-600'
-      },
-      {
-        icon: Users,
-        title: 'One-to-Many Teaching',
-        description: 'One teacher manages one subject with many students efficiently',
-        color: 'from-indigo-600 to-purple-600'
-      },
-      {
-        icon: Sparkles,
-        title: 'Personalized Recommendations',
-        description: 'AI suggests learning materials based on weak topics and performance',
-        color: 'from-pink-600 to-rose-600'
-      }
-    ];
-
+    {
+      icon: Brain,
+      title: 'AI-Powered Learning',
+      description: 'Personalized content recommendations based on your performance and learning style',
+      color: 'from-blue-600 to-cyan-600'
+    },
+    {
+      icon: Target,
+      title: 'Smart Quiz Generation',
+      description: 'AI creates custom quizzes tailored to student needs with faculty approval',
+      color: 'from-purple-600 to-pink-600'
+    },
+    {
+      icon: BarChart3,
+      title: 'Performance Analytics',
+      description: 'Detailed insights and progress tracking for students and teachers',
+      color: 'from-green-600 to-emerald-600'
+    },
+    {
+      icon: Zap,
+      title: 'Instant Feedback',
+      description: 'Get immediate results and explanations after completing quizzes',
+      color: 'from-orange-600 to-red-600'
+    },
+    {
+      icon: Users,
+      title: 'One-to-Many Teaching',
+      description: 'One teacher manages one subject with many students efficiently',
+      color: 'from-indigo-600 to-purple-600'
+    },
+    {
+      icon: Sparkles,
+      title: 'Personalized Recommendations',
+      description: 'AI suggests learning materials based on weak topics and performance',
+      color: 'from-pink-600 to-rose-600'
+    }
+  ];
   const benefits = [
     'Real-time progress tracking and analytics',
     'AI-generated quizzes with faculty review',
@@ -50,22 +48,33 @@ const Landing = () => {
     'Comprehensive notification system',
     'Role-based access control'
   ];
-  // const navigate = useNavigate()
   return (
-    <div className='min-h-screen bg-slate-900'>
-      <div className='bg-slate-900/50 background-blur-lg border-b border-slate-700 sticky top-0 z-50'>
-        <div className="flex items-center justify-between h-16">
+    <div className="min-h-screen bg-slate-900">
+      <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-slate-700 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-                <div className="bg-gradient-to-br from-blue-600 to-cyan-600 p-2 rounded-lg">
-                    <BookOpen className='w-6 h-6 text-white'/>
-                </div>
+              <div className="bg-gradient-to-br from-blue-600 to-cyan-600 p-2 rounded-lg">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
             </div>
-            <div className='flex item-center gap-3'>
-              <button className="px-4 py-2 text-slate-300 hover:text-white transition-colors cursor-pointer">Login</button>
-              <button className='px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all font-medium cursor-pointer'>Get Started</button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => navigate('/login')}
+                className="px-4 py-2 text-slate-300 hover:text-white transition-colors"
+              >
+                Login
+              </button>
+              <button
+                onClick={() => navigate('/register')}
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all font-medium"
+              >
+                Get Started
+              </button>
             </div>
+          </div>
         </div>
-      </div>
+      </nav>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-purple-900/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -154,7 +163,7 @@ const Landing = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why?
+                Why Choose EduAI Learn?
               </h2>
               <p className="text-lg text-slate-400 mb-8">
                 Our platform combines cutting-edge AI technology with proven educational methods 
@@ -205,7 +214,6 @@ const Landing = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-600/50 rounded-lg p-4">
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-8 h-8 text-green-400" />
@@ -254,7 +262,6 @@ const Landing = () => {
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
-export default Landing
+export default LandingPage;
