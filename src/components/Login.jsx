@@ -12,13 +12,14 @@ export function LoginPage() {
     if (role === 'student') {
       navigate('/student');
     } else if (role === 'teacher') {
-      navigate('/teacher');
+      navigate('/teacher/dashboard');
     } else {
       navigate('/admin');
     }
   };
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 flex items-center justify-center p-4">
       <div className="bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md p-8 border border-slate-700">
         <div className="text-center mb-8">

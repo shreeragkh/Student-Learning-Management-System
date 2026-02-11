@@ -16,10 +16,11 @@ export function RegisterPage() {
     if (role === 'student') {
       navigate('/student');
     } else if (role === 'teacher') {
-      navigate('/teacher');
+      navigate('/teacher/dashboard');  
     } else {
       navigate('/admin');
     }
+
   };
 
   return (
