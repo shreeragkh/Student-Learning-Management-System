@@ -3,8 +3,6 @@ import { ArrowLeft, Video, FileText, CheckCircle, Clock, Star, Zap } from 'lucid
 
 const RecommendationsPage = ({ onBack }) => {
   const [activeTab, setActiveTab] = useState('All Resources');
-
-  // Unified data source containing everything from your images
   const resources = [
     {
       id: 1,
@@ -111,18 +109,14 @@ const RecommendationsPage = ({ onBack }) => {
       type: "reading"
     }
   ];
-
-  // Logic to filter the items based on the selected tab
   const filteredResources = activeTab === 'All Resources' 
     ? resources 
     : resources.filter(item => item.category === activeTab);
-
   return (
     <div className="min-h-screen bg-[#0f172a] text-white p-8 font-sans">
       <button onClick={onBack} className="flex items-center gap-2 text-gray-400 hover:text-white mb-6 transition">
         <ArrowLeft size={18} /> <span className="text-sm font-medium">Back to Dashboard</span>
       </button>
-
       <div className="flex items-center gap-4 mb-8">
         <div className="bg-blue-600 p-3 rounded-xl shadow-lg shadow-blue-500/20">
           <Zap size={28} fill="white" />
@@ -132,8 +126,6 @@ const RecommendationsPage = ({ onBack }) => {
           <p className="text-gray-400 text-sm">Personalized learning materials based on your performance</p>
         </div>
       </div>
-
-      {/* Tabs */}
       <div className="flex gap-8 border-b border-gray-800 mb-8 overflow-x-auto">
         {['All Resources', 'Videos', 'Practice Quizzes', 'Reading Materials'].map(tab => (
           <button
@@ -148,8 +140,6 @@ const RecommendationsPage = ({ onBack }) => {
           </button>
         ))}
       </div>
-
-      {/* Resource Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filteredResources.map(item => (
           <div key={item.id} className="bg-[#1e293b] border border-gray-800 p-6 rounded-xl hover:border-gray-600 transition-all">
@@ -162,9 +152,7 @@ const RecommendationsPage = ({ onBack }) => {
                 <p className="text-xs text-gray-500">{item.subject} • {item.topic}</p>
               </div>
             </div>
-
             <p className="text-sm text-gray-400 mb-6 line-clamp-2">{item.desc}</p>
-
             <div className="flex items-center gap-4 mb-6 text-xs">
               <span className="flex items-center gap-1 text-gray-400"><Clock size={14} /> {item.time}</span>
               <span className={`px-2 py-0.5 rounded border ${
@@ -174,7 +162,6 @@ const RecommendationsPage = ({ onBack }) => {
               }`}>{item.level}</span>
               <span className="flex items-center gap-1 text-yellow-500"><Star size={14} fill="currentColor" /> {item.rating}</span>
             </div>
-
             <div className="space-y-2 mb-6">
               <div className="flex justify-between text-[10px] text-gray-500 uppercase">
                 <span>Completion Rate</span>
@@ -184,7 +171,6 @@ const RecommendationsPage = ({ onBack }) => {
                 <div className="bg-blue-500 h-full transition-all duration-700" style={{ width: `${item.progress}%` }} />
               </div>
             </div>
-
             <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 py-3 rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-500/20">
               Start Learning
             </button>

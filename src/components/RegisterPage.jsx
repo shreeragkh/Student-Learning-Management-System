@@ -12,7 +12,6 @@ export function RegisterPage() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    // Mock registration - navigate based on role
     if (role === 'student') {
       navigate('/student');
     } else if (role === 'teacher') {

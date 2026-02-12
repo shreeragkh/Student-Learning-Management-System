@@ -17,7 +17,6 @@ export function LoginPage() {
       navigate('/admin');
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 flex items-center justify-center p-4">
       <div className="bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md p-8 border border-slate-700">
@@ -43,7 +42,6 @@ export function LoginPage() {
               required
             />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
               Password
@@ -57,7 +55,6 @@ export function LoginPage() {
               required
             />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-3">
               Sign in as
@@ -98,7 +95,6 @@ export function LoginPage() {
                   </div>
                 )}
               </button>
-
               <button
                 type="button"
                 onClick={() => setRole('teacher')}
@@ -134,7 +130,6 @@ export function LoginPage() {
                   </div>
                 )}
               </button>
-
               <button
                 type="button"
                 onClick={() => setRole('admin')}
@@ -172,7 +167,6 @@ export function LoginPage() {
               </button>
             </div>
           </div>
-
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all font-medium"
@@ -180,7 +174,6 @@ export function LoginPage() {
             Sign In
           </button>
         </form>
-
         <div className="mt-6 text-center">
           <p className="text-sm text-slate-400">
             Don't have an account?{' '}
