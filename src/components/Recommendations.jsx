@@ -50,7 +50,7 @@ const RecommendationsPage = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filtered.map(item => (
+          {filteredResources.map(item => (
             <div key={item.id} className="bg-[#1e293b] border border-gray-800 p-6 rounded-xl hover:border-gray-600 transition-all flex flex-col justify-between">
               <div>
                 <div className="flex gap-4 mb-4">
@@ -68,11 +68,6 @@ const RecommendationsPage = () => {
               </div>
               <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 py-3 rounded-lg font-bold text-sm shadow-lg shadow-blue-500/20 active:scale-95 transition-transform">Start Learning</button>
             </div>
-            <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 py-3 rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-500/20">
-              Start Learning
-            </button>
-          </div>
-        ))}
           ))}
         </div>
       </div>
