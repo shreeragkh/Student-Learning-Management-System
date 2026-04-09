@@ -1,0 +1,16 @@
+{
+  "name": "plms-database",
+  "version": "1.0.0",
+  "description": "Database models and sample seed data for PLMS project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed/seedData.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^9.4.1"
+  }
+}
